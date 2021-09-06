@@ -5,11 +5,12 @@ function mergeSortedArrays(arr1, arr2) {
   let i = 1;
   let j = 1;
 
-  return arr1 if arr2.length === 0;
-  return arr2 if arr1.length === 0;
+  if (arr2.length === 0) return arr1;
+  if (arr1.length === 0) return arr2;
 
   while (arr1Item || arr2Item) {
-    if (!array2item || arr1Item < arr2Item) {
+    console.log(arr1Item, arr2Item)
+    if (!arr2Item || arr1Item < arr2Item) {
       mergedArray.push(arr1Item);
       arr1Item = arr1[i];
       i++;
@@ -20,8 +21,8 @@ function mergeSortedArrays(arr1, arr2) {
     }
   }
 
-
+  console.log(mergedArray)
   return mergedArray;
 }
 
-mergeSortedArrays([0,3,4,31], [4,6,30]);
+mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]);
