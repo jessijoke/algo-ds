@@ -1,3 +1,13 @@
+//simple merge sort
+function merge(left, right) {
+    let arr = []
+    while (left.length && right.length) {
+        left[0] < right[0] ? arr.push(left.shift()) : arr.push(right.shift())
+    }
+    console.log([...arr, ...left, ...right])
+}
+
+//Course Merge Sort
 function mergeSortedArrays(arr1, arr2) {
   const mergedArray = [];
   let arr1Item = arr1[0];
@@ -25,4 +35,4 @@ function mergeSortedArrays(arr1, arr2) {
   return mergedArray;
 }
 
-mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]);
+merge([0, 3, 4, 31], [4, 6, 30]);
