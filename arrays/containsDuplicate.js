@@ -1,3 +1,4 @@
+//test
 var containsDuplicate = function(nums) {
     let numberMap = {}
     for (let i = 0; i < nums.length; i++) {
